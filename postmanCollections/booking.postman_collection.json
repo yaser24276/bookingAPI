@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "51507351-a78e-47cd-ac1a-7b975aac9540",
+		"name": "booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"passengerName\": \"yaser\",\n    \"passengerContactNumber\": \"00962779004414\",\n    \"pickupTime\": \"2022-04-09T20:53:50.977395Z\",\n    \"Asap\": false,\n    \"numberOfPassengers\": 3,\n    \"price\": 2.3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/booking/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update booking",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 2,\n    \"passengerName\": \"yaser2\",\n    \"passengerContactNumber\": \"00962779004414\",\n    \"pickupTime\": \"2022-04-09T20:53:50.977395Z\",\n    \"Asap\": false,\n    \"numberOfPassengers\": 3,\n    \"price\": 2.3,\n    \"rating\": 5,\n    \"tripWaypoints\": [{\"id\": 4, \"locality\": \"home2\", \"longitude\": 2.123362, \"latitude\":3.2213231},\n    {\"id\": 1, \"locality\": \"home-old\", \"longitude\": 2.123362, \"latitude\":3.2213231}]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/booking/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"booking",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete booking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/booking/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"booking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
